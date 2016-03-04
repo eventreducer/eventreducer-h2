@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    jcenter()
+    maven {
+        url  "http://dl.bintray.com/eventreducer/org.eventreducer"
+    }
+
+}
+
+dependencies {
+    compile project(':eventreducer')
+
+    compile 'com.google.guava:guava:18.0'
+
+    compile 'org.flywaydb:flyway-core:4.0'
+    compile 'com.h2database:h2:1.4.191'
+
+    testCompile "junit:junit:4.11"
+
+    // Removes boilerplate code
+    compile 'org.projectlombok:lombok:1.16.6'
+
+}
